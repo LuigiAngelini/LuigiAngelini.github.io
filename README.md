@@ -10,3 +10,9 @@ A list of my talks with abstracts and notes, published with GitHub Pages.
 4. Commit and push. The live site updates within about a minute.
 
 A direct link to a single talk looks like `https://<username>.github.io/#<id>`.
+
+## Changing the look (style.css)
+
+Browsers keep a copy of `style.css` for up to 10 minutes. After editing it, change the
+version tag on the stylesheet line in `index.html` (e.g. `style.css?v=2026-11-14a` → `?v=2026-11-14b`)
+so visitors get the new styles right away.
