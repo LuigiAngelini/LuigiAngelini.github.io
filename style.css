@@ -245,8 +245,8 @@ footer .credit { margin-top: -6px; opacity: 0.8; }
 .tabs + .site-header { padding-top: 56px; }
 
 /* Landing page */
-.about { margin-top: 40px; }
-.bio:empty { display: none; }
+.about { margin-top: 8px; }
+.about p { margin: 0 0 14px; }
 .card {
   display: grid;
   grid-template-columns: 1fr auto;

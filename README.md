@@ -11,7 +11,7 @@ A list of my talks with abstracts and notes, published with GitHub Pages.
 
 A direct link to a single talk looks like `https://<username>.github.io/talks.html#<id>`.
 
-The home page (`index.html`) has a spot for a short bio: write it inside `<p class="bio"></p>`.
+The "About me" text is on the home page (`index.html`), inside `<section class="about">`. Add paragraphs as `<p>...</p>`.
 
 ## Changing the look (style.css)
 
