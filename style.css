@@ -1,0 +1,142 @@
+:root {
+  --bg: #fdfcfa;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --accent: #8a2b2b;
+  --rule: #e6e2dc;
+  --card: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161616;
+    --text: #e8e6e3;
+    --muted: #9a9a9a;
+    --accent: #e08a7a;
+    --rule: #2d2d2d;
+    --card: #1d1d1d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.site-header, main, footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  padding-top: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.affiliation {
+  margin: 4px 0 16px;
+  color: var(--muted);
+}
+
+.links, .resources, .meta {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+.links a, .resources a {
+  margin-right: 18px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 40px 0 8px;
+}
+
+.intro {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.talk {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 20px;
+}
+
+.talk:target {
+  background: var(--card);
+  box-shadow: 0 0 0 12px var(--card);
+  border-radius: 2px;
+}
+
+.talk h3 {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+
+.hash {
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 0.5;
+}
+.talk .hash {
+  position: absolute;
+  left: -1.1em;
+}
+.talk:hover .hash { opacity: 1; }
+.hash.copied::after {
+  content: "copied";
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.7rem;
+  margin-left: 6px;
+  color: var(--accent);
+}
+
+.meta {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.meta .venue::after { content: " · "; }
+
+.abstract { margin: 0 0 12px; }
+
+.resources { margin: 0; }
+
+footer {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .site-header { padding-top: 40px; }
+  .talk .hash { position: static; margin-right: 4px; }
+}
