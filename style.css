@@ -187,6 +187,7 @@ body { position: relative; }
   background: url("quarenghi-st-peters.webp") center / 100% 100% no-repeat;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 32%);
   mask-image: linear-gradient(to right, transparent 0%, #000 32%);
+  filter: saturate(1.2) contrast(1.05);
 }
 /* Bottom fade into the page, drawn on top of the drawing (a single mask avoids a seam in Chrome) */
 .hero::after {
@@ -207,15 +208,15 @@ main, footer { position: relative; z-index: 1; }
 }
 @media (prefers-color-scheme: dark) {
   .hero { background: linear-gradient(to bottom, rgba(120, 95, 70, 0.12), rgba(120, 95, 70, 0)); }
-  .hero::before { opacity: 0.6; filter: brightness(0.8); }
+  .hero::before { opacity: 0.88; filter: saturate(1.25) contrast(1.05); }
 }
 /* Narrow screens: the picture would sit behind the text, so make it a faint wash */
 @media (max-width: 760px) {
   .hero::before, .hero::after { width: 70vw; }
-  .hero::before { opacity: 0.35; }
+  .hero::before { opacity: 0.5; }
 }
 @media (max-width: 760px) and (prefers-color-scheme: dark) {
-  .hero::before { opacity: 0.22; }
+  .hero::before { opacity: 0.38; }
 }
 @media (max-width: 600px) {
   .hero .site-header { padding-top: 48px; padding-bottom: 40px; }
