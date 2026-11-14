@@ -143,3 +143,21 @@ footer {
 
 /* Hide abstracts that haven't been written yet */
 .abstract:empty { display: none; }
+
+/* Header with portrait */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.portrait {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .portrait { width: 110px; height: 110px; }
+}
