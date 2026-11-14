@@ -163,11 +163,12 @@ footer {
 }
 
 /* Backdrop: Giacomo Quarenghi, The Piazza of Saint Peter's Seen through an Arch of the Basilica (1778/1779), National Gallery of Art, public domain. Shown on the right side of the header.
-   It fades out toward the left (behind the text) and toward the bottom (into the page).
-   To change the picture, replace the url() in .hero::before. */
+   The whole drawing sits in the top-right corner of the page, uncropped, and fades
+   gently on its left edge and into the page at the bottom.
+   To change the picture, replace the url() and aspect-ratio in .hero::before. */
+body { position: relative; }
 .hero {
   position: relative;
-  overflow: hidden;
   background: linear-gradient(to bottom, rgba(214, 190, 160, 0.14), rgba(214, 190, 160, 0));
 }
 .hero::before {
@@ -175,15 +176,17 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  width: min(560px, 55%);
-  background: url("quarenghi-st-peters.webp") center 86% / cover no-repeat;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 25%), linear-gradient(to bottom, #000 78%, transparent 100%);
+  width: min(460px, 38vw);
+  aspect-ratio: 800 / 912;
+  background: url("quarenghi-st-peters.webp") center / 100% 100% no-repeat;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 32%), linear-gradient(to bottom, #000 72%, transparent 100%);
   -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0%, #000 25%), linear-gradient(to bottom, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 32%), linear-gradient(to bottom, #000 72%, transparent 100%);
   mask-composite: intersect;
   pointer-events: none;
+  z-index: 0;
 }
+main, footer { position: relative; z-index: 1; }
 .hero .site-header {
   position: relative;
   z-index: 1;
@@ -202,7 +205,7 @@ footer {
 }
 /* Narrow screens: the picture would sit behind the text, so make it a faint wash */
 @media (max-width: 760px) {
-  .hero::before { width: 70%; opacity: 0.35; }
+  .hero::before { width: 70vw; opacity: 0.35; }
 }
 @media (max-width: 760px) and (prefers-color-scheme: dark) {
   .hero::before { opacity: 0.22; }
