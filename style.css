@@ -140,3 +140,6 @@ footer {
   .site-header { padding-top: 40px; }
   .talk .hash { position: static; margin-right: 4px; }
 }
+
+/* Hide abstracts that haven't been written yet */
+.abstract:empty { display: none; }
