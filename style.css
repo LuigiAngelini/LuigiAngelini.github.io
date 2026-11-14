@@ -161,3 +161,36 @@ footer {
   .site-header { flex-direction: column; align-items: flex-start; gap: 18px; }
   .portrait { width: 110px; height: 110px; }
 }
+
+/* Watercolor backdrop behind the header */
+:root {
+  --hero-scrim: linear-gradient(to right, rgba(253, 252, 250, 0.88) 0%, rgba(253, 252, 250, 0.78) 45%, rgba(253, 252, 250, 0.3) 72%, rgba(253, 252, 250, 0.1) 100%);
+  --hero-fade: linear-gradient(to bottom, rgba(253, 252, 250, 0) 70%, var(--bg) 100%);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hero-scrim: linear-gradient(to right, rgba(22, 22, 22, 0.9) 0%, rgba(22, 22, 22, 0.8) 45%, rgba(22, 22, 22, 0.45) 72%, rgba(22, 22, 22, 0.3) 100%);
+    --hero-fade: linear-gradient(to bottom, rgba(22, 22, 22, 0) 70%, var(--bg) 100%);
+  }
+}
+.hero {
+  background: var(--hero-fade), var(--hero-scrim), url("backdrop.webp") center 45% / cover no-repeat;
+}
+.hero .site-header {
+  border-bottom: none;
+  padding-top: 80px;
+  padding-bottom: 56px;
+}
+.hero h1 { text-shadow: 0 1px 12px var(--bg); }
+.hero .affiliation { color: var(--text); opacity: 0.8; }
+.portrait {
+  border: 3px solid var(--bg);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+@media (max-width: 600px) {
+  .hero .site-header { padding-top: 48px; padding-bottom: 40px; }
+  :root { --hero-scrim: linear-gradient(rgba(253, 252, 250, 0.72), rgba(253, 252, 250, 0.72)); }
+}
+@media (max-width: 600px) and (prefers-color-scheme: dark) {
+  :root { --hero-scrim: linear-gradient(rgba(22, 22, 22, 0.75), rgba(22, 22, 22, 0.75)); }
+}
