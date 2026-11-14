@@ -162,7 +162,7 @@ footer {
   .portrait { width: 110px; height: 110px; }
 }
 
-/* Backdrop: Quarenghi's view of St. Peter's Square, on the right side of the header.
+/* Backdrop: Giacomo Quarenghi, The Piazza of Saint Peter's Seen through an Arch of the Basilica (1778/1779), National Gallery of Art, public domain. Shown on the right side of the header.
    It fades out toward the left (behind the text) and toward the bottom (into the page).
    To change the picture, replace the url() in .hero::before. */
 .hero {
