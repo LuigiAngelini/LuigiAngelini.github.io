@@ -18,3 +18,7 @@ The "About me" text is on the home page (`index.html`), inside `<section class="
 Browsers keep a copy of `style.css` for up to 10 minutes. After editing it, change the
 version tag on the stylesheet line in both `index.html` and `talks.html` (e.g. `style.css?v=2026-11-14a` → `?v=2026-11-14b`)
 so visitors get the new styles right away.
+
+## Updating the CV
+
+Replace `LuigiAngelini_CV.pdf` with the new file (same name), then commit and push. The links on both pages point to that file.

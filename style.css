@@ -266,3 +266,4 @@ footer .credit { margin-top: -6px; opacity: 0.8; }
 @media (max-width: 600px) {
   .tabs + .site-header { padding-top: 28px; }
 }
+.card.card-next { margin-top: 12px; }
