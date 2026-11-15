@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3.5 1.5 96 96">
+  <!-- Pyramid monogram from Luigi Angelini's ex libris -->
+  <rect x="3.5" y="1.5" width="96" height="96" rx="16" fill="#000"/>
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="miter" stroke-linecap="butt">
+    <path d="M50.4 15.5 L28.2 80.3 L51.2 89.2 L74.9 79.6 Z"/>
+    <path d="M50.4 15.5 L51.2 89.2"/>
+    <path d="M51.2 72.5 L69.4 64.5"/>
+  </g>
+</svg>
